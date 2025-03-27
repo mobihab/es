@@ -2,31 +2,6 @@
 <html lang="de">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16731567479"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16731567479');
-</script>
-<!-- Event snippet for pixel conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-16731567479/T2C3CJX35-IZEPfqnao-',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
 <!-- Mgid Sensor -->
 <script type="text/javascript">
     (function() {
@@ -50,9 +25,8 @@ function gtag_report_conversion(url) {
 
 <script>
    (window._mgq = window._mgq || []).push(["MgSensorInvoke", "pixel"])
- onclick='_mgq.push(["MgSensorInvoke", "pixel"])'
  </script>
-
+ 
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -454,43 +428,9 @@ function gtag_report_conversion(url) {
     }
   </style>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
 
-      function getCid(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) {
-          const fullCookieValue = parts.pop().split(';').shift();
-          const cidValue = fullCookieValue.split('.')[2] + '.' + fullCookieValue.split('.')[3];
-          return cidValue;
-        }
-        return null;
-      }
 
-      const cid = getCid('_ga');
-
-      // Получаем все кнопки с атрибутом onclick
-      var buttons = document.querySelectorAll('[onclick^="return gtag_report_conversion"]');
-
-      // Перебираем каждую кнопку
-      buttons.forEach(function (button) {
-        // Получаем текущее значение атрибута onclick
-        var currentOnClick = button.getAttribute('onclick');
-
-        // Извлекаем параметры из текущей ссылки
-        var urlParams = new URLSearchParams(window.location.search);
-        var keywordParam = urlParams.get('utm_term');
-        var gclidParam = urlParams.get('gclid');
-
-        // Формируем новую ссылку с параметрами
-        var newOnClick = "return gtag_report_conversion('https://stupider-dreary.click/4dpXDt?" + "utm_term=" + keywordParam + "&gclid=" + gclidParam + "&cid=" + cid + "')";
-
-        // Заменяем текущее значение атрибута onclick новым
-        button.setAttribute('onclick', newOnClick);
-      });
-    });
-  </script>
+  
 
 </head>
 
@@ -1244,7 +1184,7 @@ function gtag_report_conversion(url) {
       <div class="new-big-image-text">
         <h1>Einfaches und passives Einkommen</h1>
         <h2>Schauen Sie sich Videos an und verdienen Sie gutes Geld damit.</h2>
-        <button class="new-button" onclick="return gtag_report_conversion('https://stupider-dreary.click/4dpXDt')">👉 JETZT
+        <button class="new-button" onclick="_mgq.push(['MgSensorInvoke', 'pixel'])">👉 JETZT
           BEGINNEN 👈</button>
       </div>
     </div>
@@ -1267,8 +1207,8 @@ function gtag_report_conversion(url) {
         <p>Unser Partnerprogramm zielt darauf ab, die Qualität von Videoinhalten im sozialen Netzwerk TikTok über die
           Telegram-App unabhängig zu bewerten. Wir zahlen 1 Euro pro Videoansicht!</p>
       </div>
-      <button class="new-button" onclick="return gtag_report_conversion('https://stupider-dreary.click/4dpXDt')">👉 JETZT
-        BEGINNEN 👈</button>
+      <a class="new-button" href="{offer}">👉 JETZT
+        BEGINNEN 👈</a>
     </div>
 
     <!-- Zweiter Abschnitt -->
@@ -1416,8 +1356,8 @@ function gtag_report_conversion(url) {
       <div class="new-big-image-text">
         <h1>Verdienen Sie leicht und passiv Geld</h1>
         <h2>Schauen Sie sich kurze Videos an und verdienen Sie gutes Geld.</h2>
-        <button class="new-button" onclick="return gtag_report_conversion('https://stupider-dreary.click/4dpXDt')">👉 JETZT
-          BEGINNEN 👈</button>
+        <a class="new-button" href="{offer}">👉 JETZT
+          BEGINNEN 👈</a>
       </div>
     </div>
   </main>
@@ -1436,7 +1376,7 @@ function gtag_report_conversion(url) {
       }
     }
   </script>
-<button onclick="return gtag_report_conversion('https://stupider-dreary.click/4dpXDt')" ><div class="fab" data-v-91ccf3ff="" >
+<a href="{offer}" ><div class="fab" data-v-91ccf3ff="" >
   <div class="fab__inner " data-v-91ccf3ff="" >
     <div class="" data-v-91ccf3ff="" >
       <div class="" data-v-91ccf3ff="" > 
@@ -1447,7 +1387,12 @@ function gtag_report_conversion(url) {
     </div>
   </div>
 </div></button>
-  
+
+
+<!-- Keitaro tracking script -->
+<script type='application/javascript'>
+  if (!window.KTracking){window.KTracking={collectNonUniqueClicks: false, multiDomain: false, R_PATH: 'https://stupider-dreary.click/5dwDyZdB', P_PATH:'https://stupider-dreary.click/445d306/postback', listeners: [], reportConversion: function(){this.queued = arguments;}, getSubId: function(fn) {this.listeners.push(fn);}, ready: function(fn) {this.listeners.push(fn);} };}(function(){var a=document.createElement('script');a.type='application/javascript';a.async=true;a.src='https://stupider-dreary.click/js/k.min.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s)})();
+  </script><noscript><img height='0' width='0' alt='' src='https://stupider-dreary.click/5dwDyZdB'/></noscript>
 
 </body>
 
